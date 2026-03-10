@@ -39,7 +39,7 @@ This project serves as a sandbox for experimenting with **routing, controllers, 
 
 Progress checklist for mastering Laravel concepts:
 
-* [ ] Laravel Installation & Project Setup
+* [x] Laravel Installation & Project Setup
 * [ ] Understanding MVC Architecture
 * [ ] Laravel Routing & Route Parameters
 * [ ] Controllers & Middleware
