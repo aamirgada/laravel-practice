@@ -13,6 +13,28 @@ Route::get('/productcategory', function () {
 });
 
 
+Route::get('cal/{op}/{num1}/{num2}', function ($op, $num1, $num2) {
+
+    if($op == 'add') {
+        $result = $num1 + $num2;
+    } 
+    else if($op == 'sub') {
+        $result = $num1 - $num2;
+    } 
+    else if($op == 'mul') {
+        $result = $num1 * $num2;
+    } 
+    else if($op == 'div') {
+        $result = $num1 / $num2;
+    } 
+    else {
+        $result = "Invalid operation";
+    }
+
+    return "Result: $result";   
+    
+});
+
 // Route::get('/about', function () {
 //     return view('about');
 // }); 
