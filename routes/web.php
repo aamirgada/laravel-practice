@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\StudentController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -34,6 +35,16 @@ Route::get('cal/{op}/{num1}/{num2}', function ($op, $num1, $num2) {
     return "Result: $result";   
     
 });
+
+Route::get('/user', [UserController::class, 'show']
+);
+Route::get('/students', [StudentController::class, 'students']
+);
+Route::get('/student/{name}', [StudentController::class, 'student']
+);
+Route::get('/course/{course}', [StudentController::class, 'course']
+);
+
 
 // Route::get('/about', function () {
 //     return view('about');
